@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getLongitude() 获取经度
  * @method void setLongitude(float $Longitude) 设置经度
- * @method float getLatitude() 获取维度
- * @method void setLatitude(float $Latitude) 设置维度
+ * @method float getLatitude() 获取纬度
+ * @method void setLatitude(float $Latitude) 设置纬度
  * @method string getLocationType() 获取类型
  * @method void setLocationType(string $LocationType) 设置类型
  * @method float getAccuracy() 获取误差精度预估，单位为米
@@ -41,7 +41,7 @@ class DescribeDeviceLocationSolveResponse extends AbstractModel
     public $Longitude;
 
     /**
-     * @var float 维度
+     * @var float 纬度
      */
     public $Latitude;
 
@@ -63,7 +63,7 @@ class DescribeDeviceLocationSolveResponse extends AbstractModel
 
     /**
      * @param float $Longitude 经度
-     * @param float $Latitude 维度
+     * @param float $Latitude 纬度
      * @param string $LocationType 类型
      * @param float $Accuracy 误差精度预估，单位为米
 注意：此字段可能返回 null，表示取不到有效值。
