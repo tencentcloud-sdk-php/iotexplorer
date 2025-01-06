@@ -18,36 +18,19 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ActivateTWeCallLicense请求参数结构体
+ * PauseTWeCallDevice请求参数结构体
  *
- * @method integer getPkgType() 获取TWecall类型：0-体验套餐；1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
- * @method void setPkgType(integer $PkgType) 设置TWecall类型：0-体验套餐；1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
- * @method string getMiniProgramAppId() 获取参数已弃用，不用传参
- * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置参数已弃用，不用传参
  * @method array getDeviceList() 获取设备列表
  * @method void setDeviceList(array $DeviceList) 设置设备列表
  */
-class ActivateTWeCallLicenseRequest extends AbstractModel
+class PauseTWeCallDeviceRequest extends AbstractModel
 {
-    /**
-     * @var integer TWecall类型：0-体验套餐；1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
-     */
-    public $PkgType;
-
-    /**
-     * @var string 参数已弃用，不用传参
-     * @deprecated
-     */
-    public $MiniProgramAppId;
-
     /**
      * @var array 设备列表
      */
     public $DeviceList;
 
     /**
-     * @param integer $PkgType TWecall类型：0-体验套餐；1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
-     * @param string $MiniProgramAppId 参数已弃用，不用传参
      * @param array $DeviceList 设备列表
      */
     function __construct()
@@ -63,14 +46,6 @@ class ActivateTWeCallLicenseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PkgType",$param) and $param["PkgType"] !== null) {
-            $this->PkgType = $param["PkgType"];
-        }
-
-        if (array_key_exists("MiniProgramAppId",$param) and $param["MiniProgramAppId"] !== null) {
-            $this->MiniProgramAppId = $param["MiniProgramAppId"];
-        }
-
         if (array_key_exists("DeviceList",$param) and $param["DeviceList"] !== null) {
             $this->DeviceList = [];
             foreach ($param["DeviceList"] as $key => $value){
