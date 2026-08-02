@@ -18,28 +18,28 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Webhook工具配置列表
+ * 事件回调配置
  *
- * @method string getUrl() 获取<p>Webhook地址</p>
- * @method void setUrl(string $Url) 设置<p>Webhook地址</p>
- * @method integer getTimeout() 获取<p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
- * @method void setTimeout(integer $Timeout) 设置<p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
+ * @method boolean getEnabled() 获取<p>是否开启</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>是否开启</p>
+ * @method string getTopic() 获取<p>Topic 名称</p>
+ * @method void setTopic(string $Topic) 设置<p>Topic 名称</p>
  */
-class TalkWebhookEndpoint extends AbstractModel
+class TalkEventCallbackConfig extends AbstractModel
 {
     /**
-     * @var string <p>Webhook地址</p>
+     * @var boolean <p>是否开启</p>
      */
-    public $Url;
+    public $Enabled;
 
     /**
-     * @var integer <p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
+     * @var string <p>Topic 名称</p>
      */
-    public $Timeout;
+    public $Topic;
 
     /**
-     * @param string $Url <p>Webhook地址</p>
-     * @param integer $Timeout <p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
+     * @param boolean $Enabled <p>是否开启</p>
+     * @param string $Topic <p>Topic 名称</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TalkWebhookEndpoint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
 
-        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
-            $this->Timeout = $param["Timeout"];
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = $param["Topic"];
         }
     }
 }
